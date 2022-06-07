@@ -1,18 +1,46 @@
 let screen = document.querySelector(`.screen`);
 
-const btnPlus = document.querySelector(`.btn-plus`);
+const container = document.querySelector(`.container`);
+const buttons = document.querySelector('.buttons');
 
-const btnNumber = document.querySelector('.btn-number');
-console.log(btnNumber.innerText);
- 
-btnNumber.addEventListener('click', updateScreen);
+let action;
 
-screenValue = 0;
-screen.value = screenValue;
+buttons.addEventListener('click', e => {
+    if (e.target.matches('.btn')) {
+        const button = e.target;
+        action = button.dataset.action;
+        
+    }
+    if (!action) {
+        console.log('number key!');
+    }
+    
+    if (action === 'add' ||
+        action === 'subtract' ||
+        action === 'multiply' ||
+        action === 'divide'
+    ) {
+      console.log('operator key');  
+    }
+    
+    if (action === 'decimal') {
+        console.log('decimal key!')
+      }
+      
+      if (action === 'all-clear') {
+        console.log('clear key!')
+      }
+      
+      if (action === 'calculate') {
+        console.log('equal key!')
+      }
+});
 
-function updateScreen() {
-    screen.innerText = btnNumber.textContent;
-}
+
+
+
+
+
 
 
 

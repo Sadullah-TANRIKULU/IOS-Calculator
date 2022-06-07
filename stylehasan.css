@@ -30,6 +30,7 @@ body {
   grid-template-rows: repeat(5, 100px);
   row-gap: 10px;
   column-gap: 20px;
+  cursor: pointer;
 }
 
 .btn {
