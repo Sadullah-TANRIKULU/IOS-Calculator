@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 250px 520px;
+    
+}
+
+
+.input {
+    border-radius: 20px 20px 0 0;
+    width:340px;
+    height: 25vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+        font-size: 2rem;
+        color: whitesmoke;
+        margin-bottom: 0;
+        background-color: #010;
+        outline: none;
+        width: 20rem;
+        height: 7rem;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+
+.buttons {
+    padding-bottom: 1rem;
+    border-radius: 0 0 20px 20px;
+    font-size: 1.6rem;
+    width:340px;
+    background-color: black;
+    color: whitesmoke;
+    display: grid;
+    // grid-template-columns: 50px 50px 50px 50px;    // böyle de çalışıyor
+    // grid-template-rows: 50px 50px 50px 50px 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    // justify-content: center;
+    // align-items: center;
+    column-gap: 5px;
+    row-gap: 10px;
+    .btn {
+        background-color: #181818;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+        background-color: #484848;
+        cursor: pointer;
+        
+
+        }
+        .btn__zero {
+            grid-column: 1 /span 2;
+            // grid-column-end: 3;
+        }
+    }
+    .gray-btn {
+        background-color: #838383;
+        color: black;
+    }
+    .yellow-btn {
+        background-color: #ffac00;
+    }
+}
+
